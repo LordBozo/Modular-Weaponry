@@ -1,7 +1,12 @@
 ﻿using System;
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.UI;
 
 namespace Modular_Weaponry
 {
@@ -18,7 +23,7 @@ namespace Modular_Weaponry
                 AutoloadSounds = true
             };
         }
-
+        
         Item[] items;
         public override void PostDrawInterface(SpriteBatch spriteBatch)
         {
@@ -30,7 +35,7 @@ namespace Modular_Weaponry
                 for (int i = 0; i < items.Length; ++i)
                 {
                     // We'll probably want to change the drawPos to something... Better,
-                    Vector2 drawPos = new Vector2(20 + (i * 56) * inventoryScale, 260 * Main.inventoryScale);
+                    Vector2 drawPos = new Vector2(20 + (i * 56) * Main.inventoryScale, 260 * Main.inventoryScale);
 
                     // A reaaaally long check to see if the mouse is inside our custom UI, to hijack any input.
                     if (Main.mouseX >= drawPos.X && (double)Main.mouseX <= (double)drawPos.X + (double)Main.inventoryBackTexture.Width * (double)Main.inventoryScale && (Main.mouseY >= drawPos.Y && (double)Main.mouseY <= (double)drawPos.Y + (double)Main.inventoryBackTexture.Height * (double)Main.inventoryScale))
@@ -58,4 +63,12 @@ namespace Modular_Weaponry
             }
         }
     }
+    public static class Extensions
+    {
+        public static bool IsModule(this Item item)
+        {
+            return item.modItem is Module;
+        }
+    }
 }
+
