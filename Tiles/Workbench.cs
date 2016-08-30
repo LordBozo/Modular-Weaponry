@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace Modular_Weaponry.Tiles
+namespace ModularWeaponry.Tiles
 {
 	public class Workbench : ModTile
 	{

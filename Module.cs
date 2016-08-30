@@ -8,9 +8,12 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.UI;
 
-public delegate bool ApplyModule(ref Item weapon);
-public class Modular_Weaponry : ModItem
+namespace Modular_Weaponry
 {
-    public int moduleType;
-    public ApplyModule applyModule;
+    public class Module : ModItem
+    {
+        public delegate bool ApplyModule(ref Item weapon);
+        public int moduleType;
+        public ApplyModule applyModule;
+    }
 }
