@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+author = Lord Bozo & Iriazul
+version = 0.0.1
+=======
+﻿author = Lord Bozo & Iriazul
+version = 0.01
+>>>>>>> 22f6975025e7eacb61d329cb89ff1de251c0e3b5
+displayName = Modular Weaponry
+hideCode = true
+hideResources = true
+includeSource = false
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+<<<<<<< HEAD
+includePDB = false
+=======
+>>>>>>> 22f6975025e7eacb61d329cb89ff1de251c0e3b5
